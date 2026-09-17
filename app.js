@@ -11,8 +11,11 @@ const THEMES=[
   {id:'foto', keys:['personalizzat','foto','inciso','incisa','iniziale','dedica']},
   {id:'tavola', keys:['tazza','mug','vino','calice','birra','tagliere','caff']},
   {id:'ricordi', keys:['libro','domande','ricordi','coperta','cuscino','targa']},
-  {id:'accessori', keys:['portachiavi','borsa','tote','sciarpa','orologio','portafoglio','t-shirt','maglia']}
+  {id:'accessori', keys:['portachiavi','borsa','tote','sciarpa','orologio','portafoglio','t-shirt','maglia']},
+  {id:'tech', keys:['powerbank','usb','iphone','samsung','bluetooth','speaker','cuffie','auricolari','smartwatch','caricabatter','caricatore','tech','tecnolog']}
 ];
+const RAGAZZI=['ragazz','teen','puzzle','lego','gaming','bambino','bambina','nipote','figlio','figlia'];
+function isRagazzi(title){const t=title.toLowerCase();return RAGAZZI.some(k=>t.includes(k));}
 function themeOf(title){
   const t=title.toLowerCase();
   const hits=[];
@@ -30,52 +33,36 @@ const I18N={
     qWho:'Per chi stai cercando?',
     qBudget:'Quale budget?',
     qCat:'Che tipo di regalo?',
-    all:'Tutti',
-    mamma:'Per Mamma',
-    papa:'Per Pap\u00e0',
-    cats:'Categorie',
-    back:'\u2190 Cambia risposte',
-    featured:'In evidenza',
-    priceAsc:'Prezzo crescente',
-    priceDesc:'Prezzo decrescente',
-    amazon:'Vedi su Amazon',
-    indicative:'indicativo',
-    more:'Mostra altri',
+    all:'Tutti', mamma:'Per Mamma', papa:'Per Pap\u00e0', ragazzi:'Per Ragazzi',
+    cats:'Categorie', back:'\u2190 Cambia risposte',
+    featured:'In evidenza', priceAsc:'Prezzo crescente', priceDesc:'Prezzo decrescente',
+    amazon:'Vedi su Amazon', indicative:'indicativo', more:'Mostra altri',
     emptyTitle:'Nessun risultato',
-    emptyText:'Cambia categoria o torna al quiz.',
+    emptyText:'Pochi pezzi su Ragazzi/Tecnologia nel catalogo attuale. Cambia filtro o torna al quiz.',
     footer1:'Quiz, poi i link Amazon.it.',
     footer2:'Amazon e il logo Amazon sono marchi di Amazon.com, Inc. o delle sue affiliate.',
     footer3:'Questo sito non vende direttamente prodotti e non gestisce pagamenti o spedizioni.',
     disclosure:'<strong>Trasparenza:</strong> in qualit\u00e0 di Affiliato Amazon, BJ Beyond riceve un guadagno dagli acquisti idonei. Per te il prezzo non cambia.',
     count:n=>n+' idee regalo',
-    themes:{all:'Tutte',gioielli:'Gioielli',fiori:'Fiori',luce:'Casa e luce',foto:'Personalizzati',tavola:'Tavola',ricordi:'Ricordi',accessori:'Accessori'}
+    themes:{all:'Tutte',gioielli:'Gioielli',fiori:'Fiori',luce:'Casa e luce',foto:'Personalizzati',tavola:'Tavola',ricordi:'Ricordi',accessori:'Accessori',tech:'Tecnologia'}
   },
   en:{
     title:'BJ Beyond Gift Finder | Find the gift in 3 questions',
     h1:'Three questions.<br>Then the gift.',
     lead:'No endless list. Choose who, budget and category. Ok, and you only see what fits.',
-    qWho:'Who is it for?',
-    qBudget:'What budget?',
-    qCat:'What kind of gift?',
-    all:'All',
-    mamma:'For Mum',
-    papa:'For Dad',
-    cats:'Categories',
-    back:'\u2190 Change answers',
-    featured:'Featured',
-    priceAsc:'Price: low to high',
-    priceDesc:'Price: high to low',
-    amazon:'View on Amazon',
-    indicative:'indicative',
-    more:'Load more',
+    qWho:'Who is it for?', qBudget:'What budget?', qCat:'What kind of gift?',
+    all:'All', mamma:'For Mum', papa:'For Dad', ragazzi:'For teens',
+    cats:'Categories', back:'\u2190 Change answers',
+    featured:'Featured', priceAsc:'Price: low to high', priceDesc:'Price: high to low',
+    amazon:'View on Amazon', indicative:'indicative', more:'Load more',
     emptyTitle:'No results',
-    emptyText:'Change category or go back to the quiz.',
+    emptyText:'Few teen/tech items in the current catalogue. Change filter or go back to the quiz.',
     footer1:'Quiz, then Amazon.it links.',
     footer2:'Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.',
     footer3:'This site does not sell products directly and does not handle payments or shipping.',
     disclosure:'<strong>Disclosure:</strong> as an Amazon Associate, BJ Beyond earns from qualifying purchases. The price does not change for you.',
     count:n=>n+' gift ideas',
-    themes:{all:'All',gioielli:'Jewellery',fiori:'Flowers',luce:'Home & light',foto:'Personalised',tavola:'Table',ricordi:'Memories',accessori:'Accessories'}
+    themes:{all:'All',gioielli:'Jewellery',fiori:'Flowers',luce:'Home & light',foto:'Personalised',tavola:'Table',ricordi:'Memories',accessori:'Accessories',tech:'Tech'}
   }
 };
 window.__t=I18N.it;
@@ -109,6 +96,8 @@ function applyLang(lang){
   document.querySelector('#whoBtns .choice[data-category="mamma"]').textContent=t.mamma;
   const papaBtn=document.querySelector('#whoBtns .choice[data-category="pap\u00e0"]')||document.querySelector('#whoBtns .choice[data-category="papa"]');
   if(papaBtn) papaBtn.textContent=t.papa;
+  const ragBtn=document.querySelector('#whoBtns .choice[data-category="ragazzi"]');
+  if(ragBtn) ragBtn.textContent=t.ragazzi;
   document.querySelector('#budgetBtns .budget[data-budget="all"]').textContent=t.all;
   $('#backQuiz').textContent=t.back;
   $('#loadMore').textContent=t.more;
@@ -121,7 +110,8 @@ function applyLang(lang){
 }
 function filtered(){
   return products.filter(p=>{
-    if(state.category!=='all' && p.c!==state.category) return false;
+    if(state.category==='ragazzi'){ if(!isRagazzi(p.t)) return false; }
+    else if(state.category!=='all' && p.c!==state.category) return false;
     if(state.budget!=='all' && p.b!==state.budget) return false;
     if(state.theme!=='all' && !themeOf(p.t).includes(state.theme)) return false;
     return true;
@@ -134,7 +124,7 @@ function filtered(){
 function card(p){
   const t=window.__t;
   const title=p.t.replace(/[<>]/g,'');
-  const cat=p.c==='mamma'?t.mamma:t.papa;
+  const cat=p.c==='mamma'?t.mamma:(state.category==='ragazzi'?t.ragazzi:t.papa);
   return '<article class="card"><div class="image-wrap"><img src="'+p.i+'" alt="'+title.replace(/"/g,'&quot;')+'" loading="lazy" decoding="async" width="320" height="320" referrerpolicy="no-referrer"></div><div class="card-body"><span class="tag">'+cat+' \u00b7 '+budgetLabels[p.b]+'</span><h2>'+title+'</h2><div class="price">'+euro.format(p.p)+' <small>'+t.indicative+'</small></div><a class="amazon-btn" href="'+p.u+'" target="_blank" rel="sponsored nofollow noopener">'+t.amazon+'</a></div></article>';
 }
 function render(reset){
@@ -175,3 +165,22 @@ $('#backQuiz').addEventListener('click',showQuiz);
 $$('[data-lang]').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
 products=window.PRODUCTS||[];
 applyLang(localStorage.getItem('gf-lang')||'it');
+(function fromPin(){
+  const q=new URLSearchParams(location.search);
+  const who=q.get('who');
+  const theme=q.get('theme');
+  const budget=q.get('budget');
+  if(who && ['all','mamma','pap\u00e0','papa','ragazzi'].includes(who)){
+    state.category=who==='papa'?'pap\u00e0':who;
+    $$('#whoBtns .choice').forEach(x=>x.classList.toggle('active',x.dataset.category===state.category));
+  }
+  if(budget && ['all','sotto_20','20_50','50_100','oltre_100'].includes(budget)){
+    state.budget=budget;
+    $$('#budgetBtns .budget').forEach(x=>x.classList.toggle('active',x.dataset.budget===budget));
+  }
+  if(theme && THEMES.some(t=>t.id===theme)){
+    state.theme=theme;
+    renderThemeButtons();
+  }
+  if(q.get('go')==='1' || theme || (who && who!=='all')) showResults();
+})();
