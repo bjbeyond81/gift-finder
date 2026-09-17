@@ -1,9 +1,7 @@
 name: Ingest Amazon Tech
 on:
   push:
-    paths:
-      - inbox-tech.txt
-      - ingest-amazon.py
+    paths: [inbox-tech.txt, ingest-amazon.py]
   workflow_dispatch:
 permissions:
   contents: write
@@ -13,13 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
+        with: {python-version: "3.12"}
       - run: python ingest-amazon.py
-      - name: Commit catalog
-        run: |
-          git config user.name "gf-ingest"
-          git config user.email "ingest@bjbeyond.pro"
+      - run: |
+          git config user.name gf-ingest
+          git config user.email ingest@bjbeyond.pro
           git add data-5.js
-          git diff --cached --quiet || git commit -m "chore: ingest tech from inbox-tech.txt"
+          git diff --cached --quiet || git commit -m "chore: ingest tech inbox"
           git push

@@ -1,5 +1,5 @@
-# Una riga = un prodotto Tech
-# Formato: URL | titolo (opzionale) | prezzo EUR (opzionale)
-# Il tag viene sempre riscritto a 357921-21
+# URL | titolo | prezzo
+# tag sempre 357921-21
 
-https://www.amazon.it/dp/B0FQGPJCJK?tag=357921-21 | Apple iPhone 17 Pro 256 GB Blu profondo | 1149
+https://www.amazon.it/dp/B0FQGPJCJK | Apple iPhone 17 Pro 256 GB Blu profondo | 1149
+https://www.amazon.it/Apple-MYQY3ZM-A-EarPods-USB-C/dp/B0DCNWN8NZ | Apple EarPods USB-C originali (2024) | 16
