@@ -1,0 +1,1 @@
+window.PRODUCTS=(window.PRODUCTS||[]).concat([{"c":"papà","b":"sotto_20","t":"Auricolari EarPods USB-C cuffie con filo, suono ottimizzato, telecomando sul cavo, USB-C nativo","p":16.00,"u":"https://www.amazon.it/dp/B0FQGPJCJK?tag=357921-21","i":"https://images-eu.ssl-images-amazon.com/images/P/B0FQGPJCJK.01.LZZZZZZZ.jpg"}]);
