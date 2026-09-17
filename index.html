@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="it">
+<html lang="it" translate="no">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>BJ Beyond Gift Finder | Idee regalo Amazon per Mamma e Papà</title>
   <meta name="description" content="Trova idee regalo Amazon per Mamma e Papà per fascia di budget. Catalogo BJ Beyond con ricerca e filtri rapidi.">
+  <meta name="google" content="notranslate">
   <link rel="canonical" href="https://bjbeyond.pro/">
   <meta property="og:title" content="BJ Beyond Gift Finder">
   <meta property="og:description" content="Idee regalo Amazon per Mamma e Papà, filtrabili per budget.">
@@ -15,14 +16,20 @@
 <body>
 <header class="topbar">
   <a class="brand" href="/" aria-label="BJ Beyond Gift Finder home"><span>BJ</span> BEYOND <b>GIFT FINDER</b></a>
-  <a class="pill" href="#catalogo">Esplora i regali</a>
+  <div class="top-actions">
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="it" class="lang active">IT</button>
+      <button type="button" data-lang="en" class="lang">EN</button>
+    </div>
+    <a class="pill" href="#catalogo" data-i="explore">Esplora i regali</a>
+  </div>
 </header>
 <main>
   <section class="hero">
     <div>
       <p class="eyebrow">AMAZON GIFT DISCOVERY</p>
-      <h1>Il regalo giusto,<br>senza perdere ore.</h1>
-      <p class="lead">Una selezione di idee regalo per <strong>Mamma</strong> e <strong>Papà</strong>, organizzata per budget e pronta da esplorare.</p>
+      <h1 data-i-html="h1">Il regalo giusto,<br>senza perdere ore.</h1>
+      <p class="lead" data-i-html="lead">Una selezione di idee regalo per <strong>Mamma</strong> e <strong>Papà</strong>, organizzata per budget e pronta da esplorare.</p>
       <div class="hero-actions">
         <button class="choice active" data-category="all">Tutti</button>
         <button class="choice" data-category="mamma">Per Mamma</button>
@@ -30,24 +37,28 @@
       </div>
     </div>
     <aside class="hero-card">
-      <span class="kicker">COME FUNZIONA</span>
-      <ol><li>Scegli per chi stai cercando.</li><li>Imposta il budget.</li><li>Apri il prodotto su Amazon.</li></ol>
-      <p class="micro">I prezzi mostrati sono indicativi e possono cambiare. Verifica sempre prezzo e disponibilità su Amazon.</p>
+      <span class="kicker" data-i="how">COME FUNZIONA</span>
+      <ol>
+        <li data-i="step1">Scegli per chi stai cercando.</li>
+        <li data-i="step2">Imposta il budget.</li>
+        <li data-i="step3">Apri il prodotto su Amazon.</li>
+      </ol>
+      <p class="micro" data-i="micro">I prezzi mostrati sono indicativi e possono cambiare. Verifica sempre prezzo e disponibilità su Amazon.</p>
     </aside>
   </section>
 
-  <section class="disclosure" aria-label="Affiliate disclosure">
+  <section class="disclosure" aria-label="Affiliate disclosure" data-i-html="disclosure">
     <strong>Trasparenza:</strong> in qualità di Affiliato Amazon, BJ Beyond riceve un guadagno dagli acquisti idonei. Per te il prezzo non cambia.
   </section>
 
   <section id="catalogo" class="catalog">
     <div class="filters">
       <div class="search-wrap">
-        <label for="search">Cerca un'idea</label>
+        <label for="search" data-i="search">Cerca un'idea</label>
         <input id="search" type="search" placeholder="es. collana, lampada, tazza…" autocomplete="off">
       </div>
       <div class="budget-wrap">
-        <span>Budget</span>
+        <span data-i="budget">Budget</span>
         <div class="budget-buttons" role="group" aria-label="Filtro budget">
           <button class="budget active" data-budget="all">Tutti</button>
           <button class="budget" data-budget="sotto_20">Sotto €20</button>
@@ -59,13 +70,13 @@
     </div>
     <div class="catalog-meta"><p id="resultCount">Caricamento…</p><select id="sort" aria-label="Ordina prodotti"><option value="featured">In evidenza</option><option value="priceAsc">Prezzo crescente</option><option value="priceDesc">Prezzo decrescente</option></select></div>
     <div id="grid" class="grid" aria-live="polite"></div>
-    <button id="loadMore" class="load-more" hidden>Mostra altri</button>
-    <div id="empty" class="empty" hidden><h2>Nessun risultato</h2><p>Prova a cambiare categoria, budget o parola chiave.</p></div>
+    <button id="loadMore" class="load-more" hidden data-i="more">Mostra altri</button>
+    <div id="empty" class="empty" hidden><h2 data-i="emptyTitle">Nessun risultato</h2><p data-i="emptyText">Prova a cambiare categoria, budget o parola chiave.</p></div>
   </section>
 </main>
 <footer>
-  <div><strong>BJ Beyond Gift Finder</strong><p>Curated gift discovery. Links open on Amazon.it.</p></div>
-  <div class="footer-note"><p>Amazon e il logo Amazon sono marchi di Amazon.com, Inc. o delle sue affiliate.</p><p>Questo sito non vende direttamente prodotti e non gestisce pagamenti o spedizioni.</p></div>
+  <div><strong>BJ Beyond Gift Finder</strong><p data-i="footer1">Curated gift discovery. Links open on Amazon.it.</p></div>
+  <div class="footer-note"><p data-i="footer2">Amazon e il logo Amazon sono marchi di Amazon.com, Inc. o delle sue affiliate.</p><p data-i="footer3">Questo sito non vende direttamente prodotti e non gestisce pagamenti o spedizioni.</p></div>
 </footer>
 <script src="data-1.js"></script>
 <script src="data-2.js"></script>
