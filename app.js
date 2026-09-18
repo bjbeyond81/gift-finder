@@ -29,7 +29,7 @@ const I18N={
     h1:'Tre domande.<br>Poi il regalo.',
     lead:'Niente lista infinita. Scegli per chi, il budget e la categoria. Ok, e vedi solo quello che ha senso.',
     qWho:'Per chi stai cercando?', qBudget:'Quale budget?', qCat:'Che tipo di regalo?',
-    all:'Tutti', mamma:'Per Mamma', papa:'Per Pap\u00e0',
+    all:'Tutti', mamma:'Per Mamma', papa:'Per Pap\u00e0', techNeutral:'Tech',
     cats:'Categorie', back:'\u2190 Cambia risposte',
     featured:'In evidenza', priceAsc:'Prezzo crescente', priceDesc:'Prezzo decrescente',
     amazon:'Vedi su Amazon', indicative:'indicativo', more:'Mostra altri',
@@ -47,7 +47,7 @@ const I18N={
     h1:'Three questions.<br>Then the gift.',
     lead:'No endless list. Choose who, budget and category. Ok, and you only see what fits.',
     qWho:'Who is it for?', qBudget:'What budget?', qCat:'What kind of gift?',
-    all:'All', mamma:'For Mum', papa:'For Dad',
+    all:'All', mamma:'For Mum', papa:'For Dad', techNeutral:'Tech',
     cats:'Categories', back:'\u2190 Change answers',
     featured:'Featured', priceAsc:'Price: low to high', priceDesc:'Price: high to low',
     amazon:'View on Amazon', indicative:'indicative', more:'Load more',
@@ -104,7 +104,7 @@ function applyLang(lang){
 }
 function filtered(){
   return products.filter(p=>{
-    if(state.category!=='all' && p.c!==state.category) return false;
+    if(state.category!=='all' && p.c!==state.category && p.c!=='all') return false;
     if(state.budget!=='all' && p.b!==state.budget) return false;
     if(state.theme!=='all' && !themeOf(p.t).includes(state.theme)) return false;
     return true;
@@ -117,7 +117,7 @@ function filtered(){
 function card(p){
   const t=window.__t;
   const title=p.t.replace(/[<>]/g,'');
-  const cat=p.c==='mamma'?t.mamma:t.papa;
+  const cat=p.c==='mamma'?t.mamma:(p.c==='pap\u00e0'?t.papa:t.techNeutral);
   return '<article class="card"><div class="image-wrap"><img src="'+p.i+'" alt="'+title.replace(/"/g,'&quot;')+'" loading="lazy" decoding="async" width="320" height="320" referrerpolicy="no-referrer"></div><div class="card-body"><span class="tag">'+cat+' \u00b7 '+budgetLabels[p.b]+'</span><h2>'+title+'</h2><div class="price">'+euro.format(p.p)+' <small>'+t.indicative+'</small></div><a class="amazon-btn" href="'+p.u+'" target="_blank" rel="sponsored nofollow noopener">'+t.amazon+'</a></div></article>';
 }
 function render(reset){
