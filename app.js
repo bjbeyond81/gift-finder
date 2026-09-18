@@ -157,7 +157,8 @@ $('#quizOk').addEventListener('click',showResults);
 $('#backQuiz').addEventListener('click',showQuiz);
 $$('[data-lang]').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
 products=window.PRODUCTS||[];
-applyLang(localStorage.getItem('gf-lang')||'it');
+const initialLang=new URLSearchParams(location.search).get('lang')||localStorage.getItem('gf-lang')||'it';
+applyLang(initialLang==='en'?'en':'it');
 (function fromPin(){
   const q=new URLSearchParams(location.search);
   const who=q.get('who');
