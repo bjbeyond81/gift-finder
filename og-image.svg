@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f6f4ef"/>
+  <circle cx="105" cy="105" r="54" fill="#171713"/>
+  <text x="105" y="119" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="700" fill="#ffffff">BJ</text>
+  <text x="190" y="112" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" letter-spacing="4" fill="#171713">BEYOND</text>
+  <text x="90" y="290" font-family="Georgia,Times New Roman,serif" font-size="72" font-weight="500" fill="#171713">Gift Finder</text>
+  <text x="90" y="360" font-family="Arial,Helvetica,sans-serif" font-size="30" fill="#5f5a52">Idee regalo + Tech selezionati su Amazon.it</text>
+  <text x="90" y="430" font-family="Arial,Helvetica,sans-serif" font-size="24" fill="#8b5e34">Destinatario · Budget · Categoria</text>
+  <text x="90" y="545" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#171713">bjbeyond.pro</text>
+</svg>
