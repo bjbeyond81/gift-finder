@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bjbeyond.pro/sitemap.xml
