@@ -4,12 +4,47 @@
 <link rel="alternate" hreflang="it" href="https://bjbeyond.pro/guides/">
 <link rel="alternate" hreflang="en" href="https://bjbeyond.pro/en/guides/">
 <link rel="alternate" hreflang="x-default" href="https://bjbeyond.pro/guides/">
-<style>*{box-sizing:border-box}html,body{margin:0;background:#f8f5ef;color:#181713;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit}.top{display:flex;justify-content:space-between;padding:18px clamp(18px,5vw,70px);border-bottom:1px solid #ddd6ca}.top a{text-decoration:none;font-weight:800}.wrap{max-width:1080px;margin:auto;padding:64px 20px 80px}.eyebrow{font-size:11px;letter-spacing:.17em;font-weight:800;color:#8b5e34;text-transform:uppercase}h1{font-family:Georgia,serif;font-size:clamp(54px,8vw,92px);line-height:.94;margin:14px 0 20px;font-weight:500}.lead{font-size:20px;line-height:1.5;color:#6c655b;max-width:760px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}.card{background:#fff;border:1px solid #e4ded3;border-radius:22px;padding:24px}.card h2{font-family:Georgia,serif;font-size:29px;font-weight:500;margin:10px 0}.card p{color:#6e675e;line-height:1.55}.tag{font-size:10px;letter-spacing:.15em;text-transform:uppercase;font-weight:800;color:#8b5e34}.link{display:inline-block;margin-top:14px;font-weight:800;text-decoration:none}@media(max-width:800px){.grid{grid-template-columns:1fr}}</style></head>
-<body><header class="top"><a href="/">BJ BEYOND · GUIDES</a><a href="/">← Portale</a></header><main class="wrap"><p class="eyebrow">Choose better</p><h1>Guide, not noise.</h1><p class="lead">Guide brevi e pratiche per capire cosa conta davvero prima di acquistare tecnologia o scegliere un servizio digitale.</p><div class="grid">
-<article class="card"><span class="tag">Wearable</span><h2>Come scegliere uno smartwatch</h2><p>Parti da uso reale, autonomia, GPS, compatibilità, sensori e comfort. Non dal numero di funzioni sulla scheda tecnica.</p><a class="link" href="/guides/come-scegliere-smartwatch/">Leggi la guida →</a></article>
-<article class="card"><span class="tag">Audio</span><h2>Come scegliere auricolari e cuffie</h2><p>Valuta forma, connessione, microfoni, autonomia e utilizzo quotidiano prima di confrontare soltanto il prezzo.</p><a class="link" href="/guides/regali-tech-sotto-50/">Leggi la guida →</a></article>
-<article class="card"><span class="tag">Digital services</span><h2>Come scegliere un abbonamento digitale</h2><p>Controlla prova gratuita, rinnovo, compatibilità, catalogo e facilità di cancellazione prima di attivare un servizio.</p><a class="link" href="/guides/come-scegliere-abbonamento-digitale/">Leggi la guida →</a></article>
-<article class="card"><span class="tag">Comparison</span><h2>Apple Watch Ultra 4 vs Garmin fēnix 8</h2><p>Autonomia, GPS, ecosistema e uso sportivo a confronto.</p><a class="link" href="/guides/apple-watch-ultra-4-vs-garmin-fenix-8/">Leggi il confronto →</a></article>
-<article class="card"><span class="tag">Comparison</span><h2>Audible vs Kindle Unlimited</h2><p>Ascolto o lettura: due servizi diversi per abitudini diverse.</p><a class="link" href="/guides/audible-vs-kindle-unlimited/">Leggi il confronto →</a></article>
-<article class="card"><span class="tag">Comparison</span><h2>Prime vs Prime Student</h2><p>Per chi sono pensati e cosa controllare prima di attivarli.</p><a class="link" href="/guides/prime-vs-prime-student/">Leggi il confronto →</a></article>
-</div></main></body></html>
+
+<style>
+:root{
+  --bg:#f6f2eb;--paper:#fffdf9;--ink:#121212;--muted:#6f6a63;--line:#ddd6cc;
+  --gold:#b7834d;--orange:#ff8a00;--blue:#6f8fdc;--radius:28px;--shadow:0 18px 50px rgba(19,19,19,.08)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit}
+.top{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:18px clamp(18px,5vw,72px);background:rgba(246,242,235,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(18,18,18,.08)}
+.brand{font-weight:900;letter-spacing:.16em;text-decoration:none;font-size:12px}
+.nav{display:flex;gap:20px;align-items:center;font-size:12px;font-weight:800}
+.nav a{text-decoration:none;opacity:.72}.nav a:hover{opacity:1}
+.wrap{max-width:1180px;margin:auto;padding:72px 22px 96px}
+.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:900;color:var(--gold)}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.035em}
+.hero-title{font-size:clamp(58px,9vw,120px);line-height:.88;margin:14px 0 24px;max-width:1000px}
+.lead{max-width:760px;font-size:clamp(18px,2.2vw,25px);line-height:1.5;color:var(--muted)}
+.grid{display:grid;gap:22px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.card-pad{padding:30px}
+.kicker{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:900;color:var(--gold)}
+.card h2{font-size:clamp(36px,4vw,58px);line-height:.95;margin:14px 0 14px}
+.card p{color:var(--muted);line-height:1.6}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border-radius:999px;padding:13px 18px;font-weight:900;font-size:13px;border:1px solid var(--ink)}
+.btn.dark{background:var(--ink);color:white}
+.btn.light{background:white}
+.section{margin-top:64px}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}
+.section-head h2{font-size:clamp(36px,5vw,64px);margin:0}
+.soft{color:var(--muted)}
+.pill{display:inline-flex;padding:8px 12px;border-radius:999px;background:#ece5da;font-size:11px;font-weight:900;letter-spacing:.08em}
+.footer{margin-top:72px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:12px;line-height:1.6}
+@media(max-width:760px){.wrap{padding-top:44px}.nav{gap:10px}.nav a:nth-child(n+4){display:none}}
+</style></head>
+<body><header class="top"><a class="brand" href="/">BJ BEYOND · GUIDES</a><nav class="nav"><a href="/">Home</a><a href="/tech/">Tech</a><a href="/amazon-offers/">Amazon</a><a href="/en/guides/">EN</a></nav></header><main class="wrap"><p class="eyebrow">Choose better</p><h1 class="hero-title">Guide, not noise.</h1><p class="lead">Guide brevi e pratiche per capire cosa conta davvero prima di acquistare tecnologia o scegliere un servizio digitale.</p><div class="grid" style="grid-template-columns:repeat(3,1fr);margin-top:42px">
+<article class="card card-pad"><span class="pill">Wearable</span><h2>Come scegliere uno smartwatch</h2><p>Parti da uso reale, autonomia, GPS, compatibilità, sensori e comfort. Non dal numero di funzioni sulla scheda tecnica.</p><a class="btn dark" href="/guides/come-scegliere-smartwatch/">Leggi la guida →</a></article>
+<article class="card card-pad"><span class="pill">Audio</span><h2>Come scegliere auricolari e cuffie</h2><p>Valuta forma, connessione, microfoni, autonomia e utilizzo quotidiano prima di confrontare soltanto il prezzo.</p><a class="btn dark" href="/guides/regali-tech-sotto-50/">Leggi la guida →</a></article>
+<article class="card card-pad"><span class="pill">Digital services</span><h2>Come scegliere un abbonamento digitale</h2><p>Controlla prova gratuita, rinnovo, compatibilità, catalogo e facilità di cancellazione prima di attivare un servizio.</p><a class="btn dark" href="/guides/come-scegliere-abbonamento-digitale/">Leggi la guida →</a></article>
+<article class="card card-pad"><span class="pill">Comparison</span><h2>Apple Watch Ultra 4 vs Garmin fēnix 8</h2><p>Autonomia, GPS, ecosistema e uso sportivo a confronto.</p><a class="btn dark" href="/guides/apple-watch-ultra-4-vs-garmin-fenix-8/">Leggi il confronto →</a></article>
+<article class="card card-pad"><span class="pill">Comparison</span><h2>Audible vs Kindle Unlimited</h2><p>Ascolto o lettura: due servizi diversi per abitudini diverse.</p><a class="btn dark" href="/guides/audible-vs-kindle-unlimited/">Leggi il confronto →</a></article>
+<article class="card card-pad"><span class="pill">Comparison</span><h2>Prime vs Prime Student</h2><p>Per chi sono pensati e cosa controllare prima di attivarli.</p><a class="btn dark" href="/guides/prime-vs-prime-student/">Leggi il confronto →</a></article>
+</div><div class="footer"><span>Editorial guides by BJ Beyond.</span><span>Built to reduce noise before you buy.</span></div></main></body></html>
