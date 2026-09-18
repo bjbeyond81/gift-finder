@@ -13,53 +13,83 @@
 <meta property="og:description" content="Prime, Audible, Kindle Unlimited, Music, registri regalo e altri servizi Amazon selezionati.">
 <meta property="og:url" content="https://bjbeyond.pro/amazon-offers/"><meta property="og:image" content="https://bjbeyond.pro/og-image.svg">
 <meta name="twitter:card" content="summary_large_image">
+
+
 <style>
-*{box-sizing:border-box}html,body{margin:0;background:#0d0d0e;color:#f5f1e8;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
-a{color:inherit}.top{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:15px clamp(16px,4vw,52px);background:rgba(13,13,14,.9);backdrop-filter:blur(12px);border-bottom:1px solid #27272a}
-.brand{text-decoration:none;font-weight:800;font-size:13px;letter-spacing:.12em}.back{text-decoration:none;color:#aaa59b;font-size:13px}
-.wrap{max-width:1200px;margin:auto;padding:64px 20px 80px}.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#ff9f43;font-weight:800}
-h1{font-family:Georgia,serif;font-size:clamp(48px,8vw,94px);font-weight:500;line-height:.92;letter-spacing:-.045em;margin:14px 0 22px;max-width:900px}
-.lead{font-size:clamp(17px,2vw,22px);color:#aaa59b;line-height:1.5;max-width:760px}.notice{margin:32px 0;padding:16px 18px;border:1px solid #353539;border-radius:16px;background:#171719;color:#bcb7ae;font-size:13px;line-height:1.55}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}.card{background:#171719;border:1px solid #2c2c30;border-radius:22px;padding:24px;display:flex;flex-direction:column;min-height:280px}
-.badge{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#ffad5b;font-weight:800}.card h2{font-family:Georgia,serif;font-size:30px;font-weight:500;margin:14px 0 10px;line-height:1}.card p{color:#a9a49b;line-height:1.55;font-size:14px;margin:0 0 18px}.facts{margin-top:auto;font-size:12px;color:#77736c}.btn{margin-top:18px;display:block;text-align:center;text-decoration:none;padding:13px 15px;border-radius:12px;background:#f5f1e8;color:#111;font-weight:800;font-size:13px}
-.btn.orange{background:#ff9900;color:#1a1000}.section{margin-top:58px}.section h2{font-family:Georgia,serif;font-size:42px;font-weight:500;margin:0 0 12px}.sub{color:#8f8a82;line-height:1.5;max-width:720px}
-footer{border-top:1px solid #2b2b2e;margin-top:64px;padding-top:24px;color:#77736c;font-size:12px;line-height:1.6}
-@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.grid{grid-template-columns:1fr}.wrap{padding-top:42px}.card{min-height:250px}}
+:root{
+  --bg:#f6f2eb;--paper:#fffdf9;--ink:#121212;--muted:#6f6a63;--line:#ddd6cc;
+  --gold:#b7834d;--orange:#ff8a00;--blue:#6f8fdc;--radius:28px;--shadow:0 18px 50px rgba(19,19,19,.08)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit}
+.top{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:18px clamp(18px,5vw,72px);background:rgba(246,242,235,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(18,18,18,.08)}
+.brand{font-weight:900;letter-spacing:.16em;text-decoration:none;font-size:12px}
+.nav{display:flex;gap:20px;align-items:center;font-size:12px;font-weight:800}
+.nav a{text-decoration:none;opacity:.72}.nav a:hover{opacity:1}
+.wrap{max-width:1180px;margin:auto;padding:72px 22px 96px}
+.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:900;color:var(--gold)}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.035em}
+.hero-title{font-size:clamp(58px,9vw,120px);line-height:.88;margin:14px 0 24px;max-width:1000px}
+.lead{max-width:760px;font-size:clamp(18px,2.2vw,25px);line-height:1.5;color:var(--muted)}
+.grid{display:grid;gap:22px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.card-pad{padding:30px}
+.kicker{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:900;color:var(--gold)}
+.card h2{font-size:clamp(36px,4vw,58px);line-height:.95;margin:14px 0 14px}
+.card p{color:var(--muted);line-height:1.6}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border-radius:999px;padding:13px 18px;font-weight:900;font-size:13px;border:1px solid var(--ink)}
+.btn.dark{background:var(--ink);color:white}
+.btn.light{background:white}
+.section{margin-top:64px}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}
+.section-head h2{font-size:clamp(36px,5vw,64px);margin:0}
+.soft{color:var(--muted)}
+.pill{display:inline-flex;padding:8px 12px;border-radius:999px;background:#ece5da;font-size:11px;font-weight:900;letter-spacing:.08em}
+.footer{margin-top:72px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:12px;line-height:1.6}
+@media(max-width:760px){.wrap{padding-top:44px}.nav{gap:10px}.nav a:nth-child(n+4){display:none}}
 </style>
-</head>
+<style>
+body{background:#111;color:#f7f2e8}.top{background:rgba(17,17,17,.86);border-color:#2a2a2a}.nav a,.brand{color:#fff}
+.wrap{max-width:1180px}.lead,.soft,.card p{color:#bbb5ab}.card{background:#1b1b1b;border-color:#2e2e2e;box-shadow:none}.card h2{color:#fff}
+.notice{margin:30px 0;padding:18px 20px;border:1px solid #343434;border-radius:18px;background:#171717;color:#bbb5ab;line-height:1.6}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service-grid .card{min-height:280px}.btn{border-color:#fff}.btn.light{color:#111}
+@media(max-width:850px){.service-grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.service-grid{grid-template-columns:1fr}}
+</style></head>
 <body>
-<header class="top"><a class="brand" href="/">BJ BEYOND</a><a class="back" href="/">← Portale</a></header>
+<header class="top"><a class="brand" href="/">BJ BEYOND · AMAZON</a><nav class="nav"><a href="/">Home</a><a href="/guides/">Guides</a><a href="/en/amazon-offers/">EN</a></nav></header>
 <main class="wrap">
 <p class="eyebrow">Amazon · Servizi · Offerte Speciali</p>
-<h1>Più di semplici prodotti.</h1>
+<h1 class="hero-title" style="color:#fff">Più di semplici prodotti.</h1>
 <p class="lead">Una selezione di servizi e programmi Amazon che possono includere prove gratuite, abbonamenti e registri. Le condizioni e l'idoneità sono determinate da Amazon e possono cambiare.</p>
 <div class="notice"><strong>Trasparenza:</strong> in qualità di Affiliato Amazon, BJ Beyond riceve un guadagno dagli acquisti idonei e da alcune azioni idonee. Per te il prezzo non cambia. Verifica sempre termini, rinnovi e requisiti direttamente su Amazon.</div>
 
-<div class="grid">
-<article class="card"><span class="badge">Prime</span><h2>Amazon Prime</h2><p>Consegne rapide, Prime Video e altri vantaggi Prime. Disponibile una prova gratuita per i clienti idonei.</p><div class="facts">30 giorni gratuiti per clienti idonei.</div><a class="btn orange" href="https://www.amazon.it/provaprime?tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Scopri Prime →</a></article>
+<div class="service-grid">
+<article class="card"><span class="badge">Prime</span><h2>Amazon Prime</h2><p>Consegne rapide, Prime Video e altri vantaggi Prime. Disponibile una prova gratuita per i clienti idonei.</p><div class="facts">30 giorni gratuiti per clienti idonei.</div><a class="btn light" href="https://www.amazon.it/provaprime?tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Scopri Prime →</a></article>
 
-<article class="card"><span class="badge">Streaming</span><h2>Prime Video</h2><p>Film, serie e contenuti inclusi nell'ecosistema Prime Video. L'idoneità alla prova è stabilita da Amazon.</p><div class="facts">Prova gratuita prevista per clienti idonei.</div><a class="btn" href="https://www.primevideo.com/?tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Apri Prime Video →</a></article>
+<article class="card"><span class="badge">Streaming</span><h2>Prime Video</h2><p>Film, serie e contenuti inclusi nell'ecosistema Prime Video. L'idoneità alla prova è stabilita da Amazon.</p><div class="facts">Prova gratuita prevista per clienti idonei.</div><a class="btn light" href="https://www.primevideo.com/?tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Apri Prime Video →</a></article>
 
-<article class="card"><span class="badge">Audio</span><h2>Audible</h2><p>Audiolibri, podcast e produzioni originali. Ascolto su mobile, web e dispositivi compatibili.</p><div class="facts">30 giorni gratuiti per clienti idonei.</div><a class="btn orange" href="https://www.amazon.it/b?node=17941650031&actionCode=AZIOther35606092201BR&tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Prova Audible →</a></article>
+<article class="card"><span class="badge">Audio</span><h2>Audible</h2><p>Audiolibri, podcast e produzioni originali. Ascolto su mobile, web e dispositivi compatibili.</p><div class="facts">30 giorni gratuiti per clienti idonei.</div><a class="btn light" href="https://www.amazon.it/b?node=17941650031&actionCode=AZIOther35606092201BR&tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Prova Audible →</a></article>
 
-<article class="card"><span class="badge">Music</span><h2>Amazon Music Unlimited</h2><p>Catalogo musicale on demand, ascolto senza pubblicità e modalità offline sui dispositivi compatibili.</p><div class="facts">30 giorni gratuiti per clienti idonei.</div><a class="btn" href="https://www.amazon.it/gp/dmusic/promotions/AmazonMusicUnlimited?tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Scopri Music Unlimited →</a></article>
+<article class="card"><span class="badge">Music</span><h2>Amazon Music Unlimited</h2><p>Catalogo musicale on demand, ascolto senza pubblicità e modalità offline sui dispositivi compatibili.</p><div class="facts">30 giorni gratuiti per clienti idonei.</div><a class="btn light" href="https://www.amazon.it/gp/dmusic/promotions/AmazonMusicUnlimited?tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Scopri Music Unlimited →</a></article>
 
-<article class="card"><span class="badge">Reading</span><h2>Kindle Unlimited</h2><p>Accesso a un ampio catalogo di eBook leggibili su Kindle e tramite app Kindle.</p><div class="facts">Prova gratuita secondo i requisiti Amazon.</div><a class="btn orange" href="https://www.amazon.it/kindle-dbs/hz/signup?tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Prova Kindle Unlimited →</a></article>
+<article class="card"><span class="badge">Reading</span><h2>Kindle Unlimited</h2><p>Accesso a un ampio catalogo di eBook leggibili su Kindle e tramite app Kindle.</p><div class="facts">Prova gratuita secondo i requisiti Amazon.</div><a class="btn light" href="https://www.amazon.it/kindle-dbs/hz/signup?tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Prova Kindle Unlimited →</a></article>
 
-<article class="card"><span class="badge">Students</span><h2>Prime Student</h2><p>Vantaggi Prime dedicati agli studenti universitari idonei, con periodo iniziale senza costi aggiuntivi.</p><div class="facts">90 giorni senza costi aggiuntivi per clienti idonei.</div><a class="btn" href="https://www.amazon.it/joinstudent?tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Scopri Prime Student →</a></article>
+<article class="card"><span class="badge">Students</span><h2>Prime Student</h2><p>Vantaggi Prime dedicati agli studenti universitari idonei, con periodo iniziale senza costi aggiuntivi.</p><div class="facts">90 giorni senza costi aggiuntivi per clienti idonei.</div><a class="btn light" href="https://www.amazon.it/joinstudent?tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Scopri Prime Student →</a></article>
 
-<article class="card"><span class="badge">Couples</span><h2>Lista Nozze</h2><p>Crea e condividi una lista nozze Amazon, aggiungendo i prodotti desiderati in un unico spazio.</p><div class="facts">Servizio dedicato alla creazione di una Lista Nozze.</div><a class="btn orange" href="https://www.amazon.it/wedding?tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Crea una Lista Nozze →</a></article>
+<article class="card"><span class="badge">Couples</span><h2>Lista Nozze</h2><p>Crea e condividi una lista nozze Amazon, aggiungendo i prodotti desiderati in un unico spazio.</p><div class="facts">Servizio dedicato alla creazione di una Lista Nozze.</div><a class="btn light" href="https://www.amazon.it/wedding?tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Crea una Lista Nozze →</a></article>
 
-<article class="card"><span class="badge">Family</span><h2>Lista Nascita</h2><p>Organizza in un unico elenco i prodotti utili per l'arrivo di un bambino e condividi la lista con chi vuoi.</p><div class="facts">Registrazione disponibile per clienti idonei.</div><a class="btn" href="https://www.amazon.it/baby-reg/homepage?tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Crea una Lista Nascita →</a></article>
+<article class="card"><span class="badge">Family</span><h2>Lista Nascita</h2><p>Organizza in un unico elenco i prodotti utili per l'arrivo di un bambino e condividi la lista con chi vuoi.</p><div class="facts">Registrazione disponibile per clienti idonei.</div><a class="btn light" href="https://www.amazon.it/baby-reg/homepage?tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Crea una Lista Nascita →</a></article>
 
-<article class="card"><span class="badge">Fashion</span><h2>Prime Prova prima, paga poi</h2><p>Su articoli idonei puoi provare prima alcuni prodotti e completare il pagamento secondo le condizioni Amazon.</p><div class="facts">Solo articoli e clienti idonei.</div><a class="btn orange" href="https://www.amazon.it/primetrybeforeyoubuy?tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Vedi gli articoli idonei →</a></article>
+<article class="card"><span class="badge">Fashion</span><h2>Prime Prova prima, paga poi</h2><p>Su articoli idonei puoi provare prima alcuni prodotti e completare il pagamento secondo le condizioni Amazon.</p><div class="facts">Solo articoli e clienti idonei.</div><a class="btn light" href="https://www.amazon.it/primetrybeforeyoubuy?tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Vedi gli articoli idonei →</a></article>
 </div>
 
-<section class="section"><p class="eyebrow">Prime Video Channels</p><h2>Scegli il tuo canale.</h2><p class="sub">Amazon prevede bounty distinti per le prove gratuite di Prime Video Channels. Le landing page cambiano in base al canale. Qui trovi una selezione di destinazioni ufficiali con tracking affiliato.</p>
-<div class="grid">
-<article class="card"><span class="badge">Cinema</span><h2>MUBI</h2><p>Cinema d'autore e selezioni curate disponibili come Prime Video Channel.</p><a class="btn" href="https://www.primevideo.com/offers/?benefitId=mubiit&tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Scopri MUBI →</a></article>
-<article class="card"><span class="badge">Movies</span><h2>Raro Video</h2><p>Film e cinema selezionato all'interno dei Prime Video Channels.</p><a class="btn orange" href="https://www.primevideo.com/offers/?benefitId=rarovideoit&tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Scopri Raro Video →</a></article>
-<article class="card"><span class="badge">Suspense</span><h2>Full Moon TV</h2><p>Contenuti dedicati a suspense, horror e cinema di genere.</p><a class="btn" href="https://www.primevideo.com/offers/?benefitId=duelit&tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Scopri Full Moon TV →</a></article>
+<section class="section"><div class="section-head"><div><span class="eyebrow">Channels</span><h2 style="color:#fff">Prime Video Channels</h2></div></div><p class="eyebrow">Prime Video Channels</p><h2>Scegli il tuo canale.</h2><p class="sub">Amazon prevede bounty distinti per le prove gratuite di Prime Video Channels. Le landing page cambiano in base al canale. Qui trovi una selezione di destinazioni ufficiali con tracking affiliato.</p>
+<div class="service-grid">
+<article class="card"><span class="badge">Cinema</span><h2>MUBI</h2><p>Cinema d'autore e selezioni curate disponibili come Prime Video Channel.</p><a class="btn light" href="https://www.primevideo.com/offers/?benefitId=mubiit&tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Scopri MUBI →</a></article>
+<article class="card"><span class="badge">Movies</span><h2>Raro Video</h2><p>Film e cinema selezionato all'interno dei Prime Video Channels.</p><a class="btn light" href="https://www.primevideo.com/offers/?benefitId=rarovideoit&tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Scopri Raro Video →</a></article>
+<article class="card"><span class="badge">Suspense</span><h2>Full Moon TV</h2><p>Contenuti dedicati a suspense, horror e cinema di genere.</p><a class="btn light" href="https://www.primevideo.com/offers/?benefitId=duelit&tag=357921-21" target="_blank" rel="sponsored nofollow noopener">Scopri Full Moon TV →</a></article>
 </div></section>
 
 <footer>Amazon e il logo Amazon sono marchi di Amazon.com, Inc. o delle sue affiliate. BJ Beyond non vende direttamente questi servizi e non gestisce pagamenti, rinnovi o cancellazioni. Le disponibilità, le prove gratuite e le condizioni possono cambiare.</footer>
