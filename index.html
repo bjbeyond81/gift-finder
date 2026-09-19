@@ -15,54 +15,58 @@
   <meta property="og:url" content="https://bjbeyond.pro/">
   <meta property="og:image" content="https://bjbeyond.pro/og-image.svg">
   <meta name="twitter:card" content="summary_large_image">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#f6f2eb;--paper:#fffdf9;--ink:#121212;--muted:#6f6a63;--line:#ddd6cc;
-  --gold:#b7834d;--orange:#ff8a00;--blue:#6f8fdc;--radius:28px;--shadow:0 18px 50px rgba(19,19,19,.08)
+  --bg:#efe8dc;--paper:#fbf7f0;--ink:#14110e;--muted:#6b645b;--line:rgba(40,32,22,.12);
+  --gold:#9a6b38;--orange:#c45a1a;--blue:#8a97ad;--radius:26px;--shadow:0 24px 60px rgba(28,18,8,.08)
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body{margin:0;background:radial-gradient(1200px 600px at 12% -10%,rgba(196,160,106,.18),transparent 55%),radial-gradient(900px 500px at 100% 0%,rgba(196,90,26,.07),transparent 50%),var(--bg);color:var(--ink);font-family:"Outfit",ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 a{color:inherit}
-.top{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:18px clamp(18px,5vw,72px);background:rgba(246,242,235,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(18,18,18,.08)}
-.brand{font-weight:900;letter-spacing:.16em;text-decoration:none;font-size:12px}
-.nav{display:flex;gap:20px;align-items:center;font-size:12px;font-weight:800}
-.nav a{text-decoration:none;opacity:.72}.nav a:hover{opacity:1}
+.top{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:16px clamp(18px,5vw,72px);background:rgba(239,232,220,.78);backdrop-filter:blur(18px) saturate(1.15);border-bottom:1px solid var(--line)}
+.brand{font-weight:800;letter-spacing:.18em;text-decoration:none;font-size:12px}
+.nav{display:flex;gap:22px;align-items:center;font-size:12px;font-weight:700}
+.nav a{text-decoration:none;opacity:.62}.nav a:hover{opacity:1}
 .wrap{max-width:1180px;margin:auto;padding:72px 22px 96px}
-.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:900;color:var(--gold)}
-h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.035em}
-.hero-title{font-size:clamp(58px,9vw,120px);line-height:.88;margin:14px 0 24px;max-width:1000px}
-.lead{max-width:760px;font-size:clamp(18px,2.2vw,25px);line-height:1.5;color:var(--muted)}
-.grid{display:grid;gap:22px}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
-.card-pad{padding:30px}
-.kicker{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:900;color:var(--gold)}
-.card h2{font-size:clamp(36px,4vw,58px);line-height:.95;margin:14px 0 14px}
-.card p{color:var(--muted);line-height:1.6}
-.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border-radius:999px;padding:13px 18px;font-weight:900;font-size:13px;border:1px solid var(--ink)}
-.btn.dark{background:var(--ink);color:white}
-.btn.light{background:white;color:#111}
-.section{margin-top:64px}
+.eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+h1,h2,h3{font-family:"Fraunces",Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.04em}
+.hero-title{font-size:clamp(56px,8.6vw,112px);line-height:.9;margin:16px 0 22px;max-width:980px}
+.lead{max-width:700px;font-size:clamp(17px,2vw,22px);line-height:1.55;color:var(--muted)}
+.grid{display:grid;gap:20px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 28px 70px rgba(28,18,8,.16)}
+.card-pad{padding:32px}
+.kicker{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+.card h2{font-size:clamp(40px,4.4vw,62px);line-height:.92;margin:16px 0 14px}
+.card p{color:var(--muted);line-height:1.55}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border-radius:999px;padding:12px 16px;font-weight:700;font-size:13px;border:1px solid var(--ink);transition:transform .2s}
+.card:hover .btn{transform:translateX(3px)}
+.btn.dark{background:var(--ink);color:#f7f2ea}
+.btn.light{background:#f7f2ea;color:#111}
+.section{margin-top:56px}
 .section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}
 .section-head h2{font-size:clamp(36px,5vw,64px);margin:0}
 .soft{color:var(--muted)}
-.pill{display:inline-flex;padding:8px 12px;border-radius:999px;background:#ece5da;font-size:11px;font-weight:900;letter-spacing:.08em}
+.pill{display:inline-flex;padding:8px 12px;border-radius:999px;background:#ece5da;font-size:11px;font-weight:800;letter-spacing:.08em}
 .footer{margin-top:72px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:12px;line-height:1.6}
 @media(max-width:760px){
   .wrap{padding:38px 16px 72px}
-  .top{padding:14px 16px}
+  .top{padding:12px 16px}
   .brand{font-size:11px}
-  .nav{gap:14px;font-size:11px}
+  .nav{gap:12px;font-size:11px}
   .nav a:nth-child(n+4){display:none}
-  .hero-title{font-size:clamp(48px,15vw,72px);line-height:.9;margin-top:10px}
-  .lead{font-size:17px;line-height:1.5}
-  .section{margin-top:34px}
-  .grid{grid-template-columns:1fr !important;gap:16px !important}
-  .card{min-height:0 !important;border-radius:24px}
-  .card-pad{padding:26px 24px}
-  .card h2{font-size:44px;line-height:.94;margin:12px 0}
+  .hero-title{font-size:clamp(46px,14vw,68px);line-height:.9;margin-top:10px}
+  .lead{font-size:16px;line-height:1.5}
+  .section{margin-top:28px}
+  .grid{grid-template-columns:1fr !important;gap:14px !important}
+  .card{min-height:0 !important;border-radius:22px}
+  .card-pad{padding:26px 22px}
+  .card h2{font-size:42px;line-height:.94;margin:12px 0}
   .card p{font-size:16px;line-height:1.5}
   .btn{padding:12px 16px;font-size:13px}
   .footer{margin-top:44px}
@@ -86,10 +90,10 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spac
 
 <section class="section">
 <div class="grid" style="grid-template-columns:1.15fr .85fr">
-<a class="card" href="/gift-finder/" style="text-decoration:none;background:#151515;color:#fff;min-height:420px">
-<div class="card-pad"><span class="kicker" style="color:#d9b48f">01 · Discovery</span><h2>Gift Finder</h2><p style="color:#c9c5bf">Tre domande. Destinatario, budget, categoria. Poi solo idee rilevanti.</p><span class="btn light">Apri il Gift Finder →</span></div>
+<a class="card" href="/gift-finder/" style="text-decoration:none;background:linear-gradient(160deg,#171411,#0f0d0b);color:#fff;min-height:420px">
+<div class="card-pad"><span class="kicker" style="color:#d4b07a">01 · Discovery</span><h2>Gift Finder</h2><p style="color:#c9bfb2">Tre domande. Destinatario, budget, categoria. Poi solo idee rilevanti.</p><span class="btn light">Apri il Gift Finder →</span></div>
 </a>
-<a class="card" href="/tech/" style="text-decoration:none;background:linear-gradient(150deg,#edf2ff,#cdd9ff);min-height:420px">
+<a class="card" href="/tech/" style="text-decoration:none;background:linear-gradient(150deg,#eceff4,#cfd6e2);min-height:420px">
 <div class="card-pad"><span class="kicker">02 · Tech</span><h2>Tech</h2><p>Smartphone, wearable, audio e accessori selezionati con un approccio editoriale.</p><span class="btn dark">Esplora Tech →</span></div>
 </a>
 </div>
@@ -97,10 +101,10 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spac
 
 <section class="section">
 <div class="grid" style="grid-template-columns:1fr 1fr">
-<a class="card" href="/amazon-offers/" style="text-decoration:none;background:linear-gradient(145deg,#ffb74d,#ff8700);min-height:330px">
-<div class="card-pad"><span class="kicker" style="color:#4c2c00">03 · Amazon</span><h2>Amazon Offers</h2><p style="color:#4c2c00">Prime, Audible, Kindle Unlimited, Music e altri servizi selezionati.</p><span class="btn dark">Scopri le offerte →</span></div>
+<a class="card" href="/amazon-offers/" style="text-decoration:none;background:linear-gradient(145deg,#e7a04a,#c45a1a);min-height:330px">
+<div class="card-pad"><span class="kicker" style="color:#4a2208">03 · Amazon</span><h2>Amazon Offers</h2><p style="color:#4a2208">Prime, Audible, Kindle Unlimited, Music e altri servizi selezionati.</p><span class="btn dark">Scopri le offerte →</span></div>
 </a>
-<a class="card" href="/guides/" style="text-decoration:none;min-height:330px">
+<a class="card" href="/guides/" style="text-decoration:none;background:linear-gradient(180deg,#fffdf8,#f3ece1);min-height:330px">
 <div class="card-pad"><span class="kicker">04 · Guides</span><h2>Guides</h2><p>Confronti e guide pratiche per scegliere con più chiarezza.</p><span class="btn dark">Leggi le guide →</span></div>
 </a>
 </div>
