@@ -43,14 +43,30 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spac
 .card p{color:var(--muted);line-height:1.6}
 .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border-radius:999px;padding:13px 18px;font-weight:900;font-size:13px;border:1px solid var(--ink)}
 .btn.dark{background:var(--ink);color:white}
-.btn.light{background:white}
+.btn.light{background:white;color:#111}
 .section{margin-top:64px}
 .section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}
 .section-head h2{font-size:clamp(36px,5vw,64px);margin:0}
 .soft{color:var(--muted)}
 .pill{display:inline-flex;padding:8px 12px;border-radius:999px;background:#ece5da;font-size:11px;font-weight:900;letter-spacing:.08em}
 .footer{margin-top:72px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:12px;line-height:1.6}
-@media(max-width:760px){.wrap{padding-top:44px}.nav{gap:10px}.nav a:nth-child(n+4){display:none}}
+@media(max-width:760px){
+  .wrap{padding:38px 16px 72px}
+  .top{padding:14px 16px}
+  .brand{font-size:11px}
+  .nav{gap:14px;font-size:11px}
+  .nav a:nth-child(n+4){display:none}
+  .hero-title{font-size:clamp(48px,15vw,72px);line-height:.9;margin-top:10px}
+  .lead{font-size:17px;line-height:1.5}
+  .section{margin-top:34px}
+  .grid{grid-template-columns:1fr !important;gap:16px !important}
+  .card{min-height:0 !important;border-radius:24px}
+  .card-pad{padding:26px 24px}
+  .card h2{font-size:44px;line-height:.94;margin:12px 0}
+  .card p{font-size:16px;line-height:1.5}
+  .btn{padding:12px 16px;font-size:13px}
+  .footer{margin-top:44px}
+}
 </style></head>
 <body>
 <header class="top">
@@ -70,10 +86,10 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spac
 
 <section class="section">
 <div class="grid" style="grid-template-columns:1.15fr .85fr">
-<a class="card" href="/gift-finder/" style="text-decoration:none;background:#151515;color:#fff;min-height:480px">
+<a class="card" href="/gift-finder/" style="text-decoration:none;background:#151515;color:#fff;min-height:420px">
 <div class="card-pad"><span class="kicker" style="color:#d9b48f">01 · Discovery</span><h2>Gift Finder</h2><p style="color:#c9c5bf">Tre domande. Destinatario, budget, categoria. Poi solo idee rilevanti.</p><span class="btn light">Apri il Gift Finder →</span></div>
 </a>
-<a class="card" href="/tech/" style="text-decoration:none;background:linear-gradient(150deg,#edf2ff,#cdd9ff);min-height:480px">
+<a class="card" href="/tech/" style="text-decoration:none;background:linear-gradient(150deg,#edf2ff,#cdd9ff);min-height:420px">
 <div class="card-pad"><span class="kicker">02 · Tech</span><h2>Tech</h2><p>Smartphone, wearable, audio e accessori selezionati con un approccio editoriale.</p><span class="btn dark">Esplora Tech →</span></div>
 </a>
 </div>
@@ -81,10 +97,10 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spac
 
 <section class="section">
 <div class="grid" style="grid-template-columns:1fr 1fr">
-<a class="card" href="/amazon-offers/" style="text-decoration:none;background:linear-gradient(145deg,#ffb74d,#ff8700);min-height:360px">
+<a class="card" href="/amazon-offers/" style="text-decoration:none;background:linear-gradient(145deg,#ffb74d,#ff8700);min-height:330px">
 <div class="card-pad"><span class="kicker" style="color:#4c2c00">03 · Amazon</span><h2>Amazon Offers</h2><p style="color:#4c2c00">Prime, Audible, Kindle Unlimited, Music e altri servizi selezionati.</p><span class="btn dark">Scopri le offerte →</span></div>
 </a>
-<a class="card" href="/guides/" style="text-decoration:none;min-height:360px">
+<a class="card" href="/guides/" style="text-decoration:none;min-height:330px">
 <div class="card-pad"><span class="kicker">04 · Guides</span><h2>Guides</h2><p>Confronti e guide pratiche per scegliere con più chiarezza.</p><span class="btn dark">Leggi le guide →</span></div>
 </a>
 </div>
