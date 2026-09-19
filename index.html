@@ -28,8 +28,12 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-se
 a{color:inherit}
 .top{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:18px clamp(18px,5vw,72px);background:rgba(246,242,235,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(18,18,18,.08)}
 .brand{font-weight:900;letter-spacing:.16em;text-decoration:none;font-size:12px}
-.nav{display:flex;gap:20px;align-items:center;font-size:12px;font-weight:800}
-.nav a{text-decoration:none;opacity:.72}.nav a:hover{opacity:1}
+.nav{display:flex;gap:14px;align-items:center;font-size:12px;font-weight:800;flex:0 1 auto;min-width:0;flex-wrap:nowrap;justify-content:flex-end}
+.nav a{text-decoration:none;opacity:.72;white-space:nowrap}.nav a:hover{opacity:1}
+.lang-switch-global{display:inline-flex;flex:0 0 auto;border:1px solid rgba(0,0,0,.18);border-radius:999px;overflow:hidden;margin-left:4px;position:relative;z-index:2}
+.lang-switch-global a{padding:7px 10px;text-decoration:none;opacity:.65;white-space:nowrap}
+.lang-switch-global a.is-active{background:#111;color:#fff;opacity:1;font-weight:900}
+.top .brand{flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:42vw}
 .wrap{max-width:1180px;margin:auto;padding:72px 22px 96px}
 .eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:900;color:var(--gold)}
 h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.035em}
@@ -55,8 +59,8 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spac
   .wrap{padding:38px 16px 72px}
   .top{padding:14px 16px}
   .brand{font-size:11px}
-  .nav{gap:14px;font-size:11px}
-  .nav a:nth-child(n+4){display:none}
+  .nav{gap:10px;font-size:11px;max-width:68vw}
+  .nav > a:nth-of-type(n+3){display:none} /* keep Gifts+Tech; never hide lang switch */
   .hero-title{font-size:clamp(48px,15vw,72px);line-height:.9;margin-top:10px}
   .lead{font-size:17px;line-height:1.5}
   .section{margin-top:34px}
@@ -77,9 +81,9 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spac
 <a href="/en/tech/">Tech</a>
 <a href="/en/amazon-offers/">Amazon</a>
 <a href="/en/guides/">Guides</a>
-<span style="display:inline-flex;border:1px solid rgba(0,0,0,.18);border-radius:999px;overflow:hidden">
-<a href="/" style="padding:7px 10px;text-decoration:none;background:#111;color:#fff;opacity:1">EN</a>
-<a href="/it/" style="padding:7px 10px;text-decoration:none;opacity:.6">IT</a>
+<span class="lang-switch-global" role="group" aria-label="Language">
+<a href="/" class="is-active" aria-label="English">EN</a>
+<a href="/it/" aria-label="Italiano">IT</a>
 </span>
 </nav>
 </header>
